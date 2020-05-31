@@ -11,10 +11,10 @@ document.querySelector("#parImparBtn").addEventListener("click", function () {
 });
 
 // Função Descubra os números Pares entre
-document.querySelector("#btnNumPar").addEventListener("click", function () {
-    let inputNumUm = document.querySelector("#inputNumPar").value.trim();
-    let inputDoisNum = document.querySelector("#inputNumParDois").value.trim();
-    let todosPares = [];
+document.querySelector("#btnNumPar").addEventListener("click", function() {
+    const inputNumUm = document.querySelector("#inputNumPar").value.trim();
+    const inputDoisNum = document.querySelector("#inputNumParDois").value.trim();
+    let todosPares=[];
     for (let i = 1; i <= inputDoisNum; i++) {
         if (i % 2 === 0) {
             todosPares.push(i);
