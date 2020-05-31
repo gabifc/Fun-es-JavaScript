@@ -12,8 +12,8 @@ document.querySelector("#parImparBtn").addEventListener("click", function () {
 
 // Função Descubra os números Pares entre
 document.querySelector("#btnNumPar").addEventListener("click", function () {
-    const inputNumUm = document.querySelector("#inputNumPar").value.trim();
-    const inputDoisNum = document.querySelector("#inputNumParDois").value.trim();
+    let inputNumUm = document.querySelector("#inputNumPar").value.trim();
+    let inputDoisNum = document.querySelector("#inputNumParDois").value.trim();
     let todosPares = [];
     for (let i = 1; i <= inputDoisNum; i++) {
         if (i % 2 === 0) {
@@ -23,11 +23,16 @@ document.querySelector("#btnNumPar").addEventListener("click", function () {
     return alert(`Os números pares entre ${inputNumUm} e ${inputDoisNum} são: ${todosPares}`);
 });
 
-// Função Perímetro
+// Função Perímetro Finalizada
 document.querySelector("#btnRaio").addEventListener("click", function () {
-    const inputRaio = document.querySelector("#inputRaio").value.trim();
-    const perimetro = (3.14 * inputRaio * 2);
-    alert(`O valor do perímetro é ${perimetro.toFixed(2)}.`);
+    let inputRaio = document.querySelector("#inputRaio").value.trim();
+    let perimetro = 0;
+    if (isNaN(inputRaio)) {
+        alert("Por favor, preencha o campo corretamente.");
+    } else if (inputRaio > 1) {
+        perimetro = 3.14 * inputRaio * 2;
+        alert(`O valor do perímetro é ${perimetro.toFixed(2)}.`);
+    }
 })
 
 // Função Área
