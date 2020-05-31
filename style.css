@@ -1,0 +1,44 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-style: italic;
+    
+}
+
+div{
+    background-color:rgb(157, 124, 189);
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+
+button{
+    background-color: indigo;
+    color: white;
+    font-weight: 600;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input {
+    border-radius: 15px;
+}
+
+.btnAleatorio{
+    width: 125px;
+    padding: 15px;
+}
+
+footer {
+    background-color:rgb(157, 124, 189);
+    color: cornsilk;
+    margin-top: 25px;
+    padding: 1px;
+    font-size: small;
+}
