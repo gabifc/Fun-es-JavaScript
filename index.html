@@ -9,14 +9,16 @@
 </head>
 
 <body>
-    <h1>Funções com Javascript</h1>
-    <p><b>Instruções:</b> Digite o valor no campor indicado e o resultado ser exibido na tela clique no botão "Resultado".</p>
-    
+    <h1>Funções Matemáticas e Calculadora - JS</h1>
+    <p><b>Instruções:</b> Digite o valor no campor indicado e o resultado ser exibido na tela clique no botão
+        "Resultado".</p>
+
     <div>
         <h2> Par ou ímpar</h2>
         <p>Aceita números positivos e inteiros.</p>
         <input id="idParImpar" type="text" name="valor" placeholder="Digite seu número aqui">
         <button id="parImparBtn" type="submit">Resultado</button>
+        <p></p>
     </div>
 
     <div>
@@ -43,9 +45,27 @@
         <h2> Clique e descubra um número aleatório entre 1 e 100! </h2>
         <button class="btnAleatorio" id="numAleatorio" type="button">Resultado</button>
     </div>
-    
-    
-    
+
+    <div>
+        <h2> Calculadora</h2>
+        <p> Digite os valores abaixo e clique na operação matemática para exibir o resultado em sua tela.</p>
+        <p> Valor 1: <input class="inputUm" type="text" onchange="capturarValor1(this.value)"></input> </p>
+        <p>Valor 2: <input class="inputDois" type="text" onchange="capturarValor2(this.value)"></input> </p> <br>
+        <br>
+        <!--onchange + this.value para capturar o valor que a pessoa digitar no site-->
+
+        <button onclick="somar()">Somar</button>
+
+        <button onclick="subtrair()">Subtrair</button>
+
+        <button onclick="multiplicar()">Multiplicar</button>
+
+        <button onclick="dividir()">Dividir</button>
+
+        <button onclick="resto()">Resto</button>
+    </div>
+
+
     <footer>
         <p>Desenvolvido por Gabrielle Fernandes 2020</p>
     </footer>
@@ -55,5 +75,3 @@
 </body>
 
 </html>
-
-

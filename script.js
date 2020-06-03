@@ -48,3 +48,43 @@ document.querySelector("#numAleatorio").addEventListener("click", function () {
     let resultAleatorio = Math.floor(Math.random() * 100);
     alert(`O número aleatório gerado é: ${resultAleatorio}`)
 });
+
+// Calculadora utilizando variáveis globais e funções reutilizaveis.
+
+let valor1 = ""; 
+let valor2 = ""; 
+let total ="";
+
+
+function capturarValor1() {
+    valor1= parseInt(document.querySelector(".inputUm").value.trim());
+} 
+
+function capturarValor2() {
+    valor2= parseInt(document.querySelector(".inputDois").value.trim());
+} 
+
+function somar() { 
+    total = valor1 + valor2; 
+    alert('O total da soma é: '  + total);
+}
+
+function subtrair(){
+    total = valor1 - valor2;
+    alert('O total da subtração é: ' + total);
+}
+
+function multiplicar(){
+    total = valor1 * valor2;
+    alert('O total da multiplicação é: ' + total);
+}
+
+function dividir(){
+    total = valor1 / valor2;
+    alert('O total da divisão é: ' + total.toFixed(2));
+}
+
+function resto(){
+    total = valor1 % valor2;
+    alert('O resto da divisão é: ' + total);
+}
