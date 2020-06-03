@@ -56,18 +56,23 @@ document.querySelector("#numAleatorio").addEventListener("click", function () {
     alert(`O número aleatório gerado é: ${resultAleatorio}`)
 });
 
-// Calculadora utilizando variáveis globais e funções reutilizaveis.
+// Calculadora utilizando variáveis globais, funções reutilizaveis e input com validação
 let valor1 = "";
 let valor2 = "";
 let total = "";
-let text = "";
 
 function capturarValor1() {
     valor1 = parseInt(document.querySelector(".inputUm").value.trim());
+    if (valor1 === " " || isNaN(valor1)){
+        alert("Inválido")
+    }
 }
 
 function capturarValor2() {
     valor2 = parseInt(document.querySelector(".inputDois").value.trim());
+    if (valor2 === " " || isNaN(valor2)){
+        alert("Inválido")
+    }
 }
 
 function somar() {
