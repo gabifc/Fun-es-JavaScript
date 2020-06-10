@@ -2,11 +2,18 @@
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 35px;
+    margin: 0;
 }
 
 h1{
     font-style: italic;
     text-align: center;
+}
+
+.divH1{
+    background-color: white;
+    max-width: 100vw;
+    width: 100%;
 }
 
 div{
@@ -16,8 +23,8 @@ div{
     border-radius: 25px;
     margin-left: 50px;
     margin-right: 50px;
-    max-width: 100%;
-    width: 100vw;
+    max-width: 100vw;
+    width: 100%;
     
 }
 
@@ -42,11 +49,13 @@ input {
     max-width: 110%;
 }
 
-footer {
-    background-color:rgb(157, 124, 189);
-    color: cornsilk;
-    margin-top: 25px;
-    padding: 1px;
-    font-size: small;
+.divFooter {
+    background-color: white;
 }
+
+.footer {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+} 
 
