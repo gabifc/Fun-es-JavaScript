@@ -1,7 +1,7 @@
 // Manipulando Números ////
 
 // Função Par e Impar Finalizada
-document.querySelector("#parImparBtn").addEventListener("click", function () {
+document.querySelector("#parImparBtn").addEventListener("click", () => {
     const inputParImpar = document.querySelector("#idParImpar").value.trim();
     if (inputParImpar === "" || inputParImpar < 1 || isNaN(inputParImpar)) {
         alert('Por favor, preencha o campo corretamente. Aceita apenas numeros positivos e inteiros.');
@@ -13,7 +13,7 @@ document.querySelector("#parImparBtn").addEventListener("click", function () {
 });
 
 // Função Descubra os números Pares entre
-document.querySelector("#btnNumPar").addEventListener("click", function () {
+document.querySelector("#btnNumPar").addEventListener("click", () => {
     const inputNumUm = document.querySelector("#inputNumPar").value.trim();
     const inputDoisNum = document.querySelector("#inputNumParDois").value.trim();
     let todosPares = [];
@@ -26,7 +26,7 @@ document.querySelector("#btnNumPar").addEventListener("click", function () {
 });
 
 // Função Perímetro Finalizada
-document.querySelector("#btnRaio").addEventListener("click", function () {
+document.querySelector("#btnRaio").addEventListener("click", () => {
     let inputRaio = document.querySelector("#inputRaio").value.trim();
     let perimetro = 0;
     if (isNaN(inputRaio)) {
@@ -38,7 +38,7 @@ document.querySelector("#btnRaio").addEventListener("click", function () {
 })
 
 // Função Área Finalizada
-document.querySelector("#btnArea").addEventListener("click", function () {
+document.querySelector("#btnArea").addEventListener("click", () => {
     const inputArea = document.querySelector("#inputArea").value.trim();
     const area = (3.14 * inputArea * inputArea);
     if (inputArea === " " || isNaN(inputArea)){
@@ -48,54 +48,58 @@ document.querySelector("#btnArea").addEventListener("click", function () {
     }
 })
 
-
-
 // Função número randômico entre 2 números quaisquer
-document.querySelector("#numAleatorio").addEventListener("click", function () {
+document.querySelector("#numAleatorio").addEventListener("click", () => {
     let resultAleatorio = Math.floor(Math.random() * 100);
     alert(`O número aleatório gerado é: ${resultAleatorio}`)
 });
 
-// Calculadora utilizando variáveis globais, funções reutilizaveis e input com validação
-let valor1 = "";
-let valor2 = "";
-let total = "";
+// Tabuadas
+document.querySelector("#btnTabuada").addEventListener("click", () => {})
 
-function capturarValor1() {
+const num = [0,1,2,3,4,5,6,7,8,9,10];
+
+num.forEach((value) => {
+    total = value*2
+    console.log(total)
+})
+
+// Calculadora utilizando: arrow function e input com validação
+let capturarValor1 = () => {
     valor1 = parseInt(document.querySelector(".inputUm").value.trim());
     if (valor1 === " " || isNaN(valor1)){
         alert("Inválido")
     }
 }
 
-function capturarValor2() {
+let capturarValor2 = () => {
     valor2 = parseInt(document.querySelector(".inputDois").value.trim());
     if (valor2 === " " || isNaN(valor2)){
         alert("Inválido")
     }
 }
 
-function somar() {
+let somar = () => {
     total = valor1 + valor2;
     alert('O total da soma é: ' + total);
 }
 
-function subtrair() {
+let subtrair = () => {
     total = valor1 - valor2;
     alert('O total da subtração é: ' + total);
 }
 
-function multiplicar() {
+let multiplicar = () => {
     total = valor1 * valor2;
     alert('O total da multiplicação é: ' + total);
 }
 
-function dividir() {
+let dividir = () => {
     total = valor1 / valor2;
     alert('O total da divisão é: ' + total.toFixed(2));
 }
 
-function resto() {
+let resto = () => {
     total = valor1 % valor2;
     alert('O resto da divisão é: ' + total);
 }
