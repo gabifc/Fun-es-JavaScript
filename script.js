@@ -55,13 +55,13 @@ document.querySelector("#numAleatorio").addEventListener("click", () => {
 });
 
 // Tabuadas
-document.querySelector("#btnTabuada").addEventListener("click", () => {})
-
-const num = [0,1,2,3,4,5,6,7,8,9,10];
-
-num.forEach((value) => {
-    total = value*2
-    console.log(total)
+document.querySelector("#btnTabuada").addEventListener("click", () => {
+    const inputTab = document.querySelector("#inputTabuada").value.trim();
+    const num = [0,1,2,3,4,5,6,7,8,9,10];
+    num.forEach((value) => {
+        total = value*inputTab;
+        console.log(total);
+    })
 })
 
 // Calculadora utilizando: arrow function e input com validação
