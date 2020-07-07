@@ -1,41 +1,41 @@
 // Manipulando Números ////
 
 // Função Par e Impar Finalizada
-document.querySelector("#parImparBtn").addEventListener("click", () => {
-    const inputParImpar = document.querySelector("#idParImpar").value.trim();
-    if (inputParImpar === "" || inputParImpar < 1 || isNaN(inputParImpar)) {
-        alert('Por favor, preencha o campo corretamente. Aceita apenas numeros positivos e inteiros.');
-    } else if (inputParImpar % 2 == 0) {
-        alert(`O número ${inputParImpar} é par.`);
-    } else {
-        alert(`O número ${inputParImpar} é impar.`);
-    }
-});
+// document.querySelector("#parImparBtn").addEventListener("click", () => {
+//     const inputParImpar = document.querySelector("#idParImpar").value.trim();
+//     if (inputParImpar === "" || inputParImpar < 1 || isNaN(inputParImpar)) {
+//         alert('Por favor, preencha o campo corretamente. Aceita apenas numeros positivos e inteiros.');
+//     } else if (inputParImpar % 2 == 0) {
+//         alert(`O número ${inputParImpar} é par.`);
+//     } else {
+//         alert(`O número ${inputParImpar} é impar.`);
+//     }
+// });
 
 // Função Descubra os números Pares entre
-document.querySelector("#btnNumPar").addEventListener("click", () => {
-    const inputNumUm = document.querySelector("#inputNumPar").value.trim();
-    const inputDoisNum = document.querySelector("#inputNumParDois").value.trim();
-    let todosPares = [];
-    for (let i = 1; i <= inputDoisNum; i++) {
-        if (i % 2 === 0) {
-            todosPares.push(i);
-        }
-    }
-    return alert(`Os números pares entre ${inputNumUm} e ${inputDoisNum} são: ${todosPares}`);
-});
+// document.querySelector("#btnNumPar").addEventListener("click", () => {
+//     const inputNumUm = document.querySelector("#inputNumPar").value.trim();
+//     const inputDoisNum = document.querySelector("#inputNumParDois").value.trim();
+//     let todosPares = [];
+//     for (let i = 1; i <= inputDoisNum; i++) {
+//         if (i % 2 === 0) {
+//             todosPares.push(i);
+//         }
+//     }
+//     return alert(`Os números pares entre ${inputNumUm} e ${inputDoisNum} são: ${todosPares}`);
+// });
 
-// Função Perímetro Finalizada
-document.querySelector("#btnRaio").addEventListener("click", () => {
-    let inputRaio = document.querySelector("#inputRaio").value.trim();
-    let perimetro = 0;
-    if (isNaN(inputRaio)) {
-        alert("Por favor, preencha o campo corretamente.");
-    } else if (inputRaio > 1) {
-        perimetro = 3.14 * inputRaio * 2;
-        alert(`O valor do perímetro é ${perimetro.toFixed(2)}.`);
-    }
-})
+// // Função Perímetro Finalizada
+// document.querySelector("#btnRaio").addEventListener("click", () => {
+//     let inputRaio = document.querySelector("#inputRaio").value.trim();
+//     let perimetro = 0;
+//     if (isNaN(inputRaio)) {
+//         alert("Por favor, preencha o campo corretamente.");
+//     } else if (inputRaio > 1) {
+//         perimetro = 3.14 * inputRaio * 2;
+//         alert(`O valor do perímetro é ${perimetro.toFixed(2)}.`);
+//     }
+// })
 
 // Função Área Finalizada
 document.querySelector("#btnArea").addEventListener("click", () => {
