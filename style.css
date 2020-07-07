@@ -5,6 +5,12 @@
     margin: 0;
 }
 
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
 h1{
     font-style: italic;
     text-align: center;
@@ -24,8 +30,6 @@ div{
     margin-left: 50px;
     margin-right: 50px;
     max-width: 100vw;
-    width: 100%;
-    
 }
 
 button{
@@ -48,14 +52,4 @@ input {
     padding: 15px;
     max-width: 110%;
 }
-
-.divFooter {
-    background-color: white;
-}
-
-.footer {
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-} 
 
