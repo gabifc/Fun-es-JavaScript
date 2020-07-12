@@ -1,123 +1,204 @@
 <!DOCTYPE html>
 <html lang="pt-bt">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Funções JavaScript</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções JavaScript</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
 
-    <body>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#par">Par e ímpar</a></li>
+                <li><a href="#npar">Números pares</a></li>
+                <li><a href="#per">Perímetro</a></li>
+                <li><a href="#area">Área</a></li>
+                <li><a href="#nale">Número aleatório</a></li>
+                <li><a href="#desc">Desconto</a></li>
+                <li><a href="#nmes">Mês correspondente</a></li>
+                <li><a href="#diames">Dias do mês</a></li>
+                <li><a href="#calc">Calculadora</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <main>
-            <div class="divH1">
-                <h1>Funções JavaScript</h1>
-                <p>
-                    <b>Instruções:</b>
-                    Digite o valor e clique no botão para o resultado ser exibido na tela.</p>
-            </div>
-            <section>
-                <form action="" method="get">
-                    <div>
-
-                        <h2>Par ou ímpar</h2>
-                        <p>Aceita números positivos e inteiros.</p>
-                        <input id="idParImpar" type="text" name="valor" placeholder="Digite seu número aqui">
-                        <button id="parImparBtn" type="submit">Resultado</button>
-                        <p id="resultado"></p>
-                    </div>
-<!--Form aqui-->
-            
-            <div>
-                <h2>
-                    Descubra os números Pares entre:
-                </h2>
-                <p>Aceita números positivos e inteiros.</p>
-                Valor 1:<input id="inputNumPar" type="text" name="valor" placeholder="Digite o valor 1 aqui"><br>
-                Valor 2:<input id="inputNumParDois" type="text" name="valor" placeholder="Digite o valor 2 aqui">
-                <button id="btnNumPar" type="submit">Resultado</button>
-                <p id="resultado2"></p>
-            </div>
-
-            <div>
-                <h2>
-                    Calcule o Perímetro
-                </h2>
-                Valor do raio:<input id="inputRaio" type="text" name="valor_perimetro" placeholder="Digite seu número aqui">
-                <button id="btnRaio" type="submit">Resultado</button>
-            </div>
-
-            <div>
-                <h2>
-                    Calcule a Área
-                </h2>
-                Valor do raio:<input id="inputArea" type="text" name="valor" placeholder="Digite seu número aqui">
-                <button id="btnArea" type="submit">Resultado</button>
+    <main>
+        <div class="divH1">
+            <h1>Funções & Gatos</h1>
+            <p>
+                <b>Instruções:</b>
+                Digite o valor e clique no botão para o resultado ser exibido na tela.</p>
+        </div>
+        <section>
+            <div class="catdiv">
+                <div class="text">
+                    <h2 id="par">Par ou ímpar</h2>
+                    <p>Aceita números positivos e inteiros.</p>
+                    <input id="idParImpar" type="text" name="valor" placeholder="Digite seu número aqui">
+                    <button id="parImparBtn" type="submit">Resultado</button>
+                    <p id="resultado"></p>
+                </div>
+                <div>
+                    <img class="catImg" src="img/cat-1.jpg" alt="ilustração de um gato com flores">
+                </div>
             </div>
 
-            <div>
-                <h2>
-                    Clique e descubra um número aleatório entre 1 e 100!
-                </h2>
-                <button class="btnAleatorio" id="numAleatorio" type="button">Resultado</button>
+            <div class="catdiv">
+                <div>
+                    <img class="catImg" src="img/cat-3.jpg" alt="ilustração de um gato com flores">
+                </div>
+                <div class="text">
+                    <h2 id="npar">
+                        Descubra os números pares entre:
+                    </h2>
+                    <p>Aceita números positivos e inteiros.</p>
+                    Valor 1:<input id="inputNumPar" type="text" name="valor" placeholder="Digite o valor 1 aqui"><br>
+                    Valor 2:<input id="inputNumParDois" type="text" name="valor" placeholder="Digite o valor 2 aqui">
+                    <button id="btnNumPar" type="submit">Resultado</button>
+                    <p id="resultado2"></p>
+                </div>
             </div>
 
-            <div>
-                <h2>Tabuada</h2>
-                <input id="inputTabuada" type="text">
-                <button id="btnTabuada" type="submit">Resultado</button>
+            <div class="catdiv">
+                <div class="text">
+                    <h2 id="per">
+                        Calcule o Perímetro
+                    </h2>
+                    Valor do raio:<input id="inputRaio" type="text" name="valor_perimetro"
+                        placeholder="Digite seu número aqui">
+                    <button id="btnRaio" type="submit">Resultado</button>
+                    <p id="resultado3"></p>
+                </div>
+                <div>
+                    <img class="catImg" src="img/cat-2.jpg" alt="ilustração de um gato com flores">
+                </div>
             </div>
 
-            <div>
-                <h2>
-                    Digite um número entre 1 e 12 e descubra o mês correspondente.
-                </h2>
-                <input id="inputMes" type="text" name="_inputMes" placeholder="Digite seu número aqui">
-                <button id="btnMes" type="submit">Resultado</button>
+            <div class="catdiv">
+                <div>
+                    <img class="catImg" src="img/cat-5.jpg" alt="ilustração de um gato com flores">
+                </div>
+                <div class="text">
+                    <h2 id="area">
+                        Calcule a Área
+                    </h2>
+                    Valor do raio:<input id="inputArea" type="text" name="valor" placeholder="Digite seu número aqui">
+                    <button id="btnArea" type="submit">Resultado</button>
+                    <p id="resultado4"></p>
+                </div>
             </div>
 
-            <div>
-                <h2>
-                    Agora descubra quantos dias tem o mês.
-                </h2>
-                <input id="inputMesDias" type="text" name="_inputMesDias" placeholder="Digite o nome do mês" style="text-transform: lowercase;">
-                <button id="btnMesDias" type="submit">Resultado</button>
+            <div class="catdiv">
+                <div class="text">
+                    <h2 id="nale">
+                        Clique e descubra um número aleatório entre 1 e 100!
+                    </h2>
+                    <button class="btnAleatorio" id="numAleatorio" type="button">Resultado</button>
+                    <p id="resultado5"></p>
+                </div>
+                <div>
+                    <img class="catImg" src="img/cat-6.jpg" alt="ilustração de um gato com flores">
+                </div>
             </div>
 
-        </section>
-        <div>
-            <h2>
+            <div class="catdiv">
+                <div>
+                    <img class="catImg" src="img/cat-7.jpg" alt="ilustração de um gato com flores">
+                </div>
+                <div class="text">
+                    <h2 id="desc">Calcular valor do desconto:</h2>
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>valor:</td>
+                            <td><input class="inpCalc" type="text" name="valor1" id="valor1"
+                                    placeholder="Exemplo: 25.50" /></td>
+                        </tr>
+                        <tr>
+                            <td>desconto % </td>
+                            <td><input class="inpCalc" type="text" name="desconto1" id="desconto1"
+                                    onblur="calcValor()" /></td>
+                        </tr>
+                        <tr>
+                            <td>desconto R$ </td>
+                            <td><input class="inpCalc" type="text" name="desconto2" id="desconto2"
+                                    onblur="calcValor()" /></td>
+                        </tr>
+                        <tr>
+                            <td>total:</td>
+                            <td><input class="inpCalc" type="text" name="total" id="total" value="0.00" /></td>
+                        <tr>
+                    </table>
+                    <input class="inputBtn" type="button" value="Calcular" onclick="calcValor()">
+
+                </div>
+            </div>
+
+            <div class="catdiv">
+                <div class="text margem">
+                    <h2 id="nmes">
+                        Digite um número entre 1 e 12 e descubra o mês correspondente.
+                    </h2>
+                    <input id="inputMes" type="text" name="_inputMes" placeholder="Digite seu número aqui">
+                    <button id="btnMes" type="submit">Resultado</button>
+                </div>
+                <div>
+                    <img class="catImg" src="img/cat-8.jpg" alt="ilustração de um gato com flores">
+                </div>
+            </div>
+
+            <div class="catdiv">
+                <div>
+                    <img class="catImg margem" src="img/cat-4.jpg" alt="ilustração de um gato com flores">
+                </div>
+                <div class="text">
+                    <h2 id="diames">
+                        Agora descubra quantos dias tem o mês.
+                    </h2>
+                    <input id="inputMesDias" type="text" name="_inputMesDias" placeholder="Digite o nome do mês"
+                        style="text-transform: lowercase;">
+                    <button id="btnMesDias" type="submit">Resultado</button>
+                </div>
+            </div>
+            <h2 id="calc">
                 Calculadora</h2>
             <p>
                 Digite os valores abaixo e clique na operação matemática para exibir o resultado em sua tela.</p>
-            <p>
-                Valor 1:
-                <input class="inputUm" type="text" onchange="capturarValor1(this.value)">
-            </p>
-            <p>Valor 2:
-                <input class="inputDois" type="text" onchange="capturarValor2(this.value)">
-            </p>
-            <br>
-            <br>
-            <!--onchange + this.value para capturar o valor que a pessoa digitar no site-->
+            <!-- </section> -->
+            <input class="inputBtn" onclick="openClose()" type="button" value="Exibir calculadora">
+            <div id="exibirOcultar" class="hidden">
 
-            <button onclick="somar()">Somar</button>
+                <p>
+                    Valor 1:
+                    <input class="inputUm inpCalc" type="text" onchange="capturarValor1(this.value)">
+                </p>
+                <p>Valor 2:
+                    <input class="inputDois inpCalc" type="text" onchange="capturarValor2(this.value)">
+                </p>
+                <!--onchange + this.value para capturar o valor que a pessoa digitar no site-->
 
-            <button onclick="subtrair()">Subtrair</button>
+                <button class="btnCalc" onclick="somar()">Somar</button>
 
-            <button onclick="multiplicar()">Multiplicar</button>
+                <button class="btnCalc" onclick="subtrair()">Subtrair</button>
 
-            <button onclick="dividir()">Dividir</button>
+                <button class="btnCalc" onclick="multiplicar()">Multiplicar</button>
 
-            <button onclick="resto()">Resto</button>
-        </div>
-</form>
+                <button class="btnCalc" onclick="dividir()">Dividir</button>
+
+                <button class="btnCalc" onclick="resto()">Resto</button>
+            </div>
+
     </main>
-
-    <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="Par-impar.js"></script>
+    </section>
+    <footer> <a href="http://" target="_blank" rel="noopener noreferrer">Desenvolvido por Gabrielle Fernandes - 2020</a>
+    </footer>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/testes.js"></script>
 
 </body>
 
 </html>
+
