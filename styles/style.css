@@ -1,0 +1,140 @@
+* {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    text-align: center;
+    background-color: #f0f0f1;
+
+}
+
+header {
+    background-color: purple;
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    margin-top: 15px;
+    padding: 25px;
+    font-size: 35px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+p {
+    padding: 5px;
+}
+
+section {
+    margin: 0px 90px 50px 90px;
+    background-color: #d1a6fa54;
+    border-radius: 10px;
+    padding-bottom: 25px;
+}
+
+input {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border: none;
+    padding: 5px;
+    text-align: center;
+}
+
+button {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 2px solid purple;
+    padding: 5px;
+    text-align: center;
+    background-color: #80008071;
+}
+
+button:hover{
+    background-color: purple;
+    color: white;
+}
+
+.catdiv {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    margin: 50px;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.catImg {
+    background-image: url(img/cat-1.jpg);
+    width: 450px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnAleatorio {
+    width: 250px;
+    align-self: center;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: purple;
+    margin-top: 25px;
+    padding: 25px;
+}
+
+.margem {
+    margin-right: 25px;
+}
+
+.inputBtn {
+    background-color: #80008071;
+    border-radius: 8px;
+    border: 2px solid purple;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.inputBtn:hover {
+    background-color: purple;
+    color: white;
+}
+
+.btnCalc {
+    width: 150px;
+    align-self: center;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.inpCalc {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding-left: 50px;
+}
+
