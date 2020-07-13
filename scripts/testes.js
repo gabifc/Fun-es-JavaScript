@@ -23,4 +23,4 @@ document.querySelector("#btnTabuada").addEventListener("click", (e) => {
     })
     */
 
-  
+   
