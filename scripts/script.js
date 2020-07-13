@@ -23,15 +23,15 @@ document.querySelector("#btnNumPar").addEventListener("click", (e) => {
     e.preventDefault()
     const inputNumUm = document.querySelector("#inputNumPar").value.trim();
     const inputDoisNum = document.querySelector("#inputNumParDois").value.trim();
-    let paragrafoResults = document.querySelector("#resultado2");
+    let ParParagrafoResult = document.querySelector("#resultado2");
     let todosPares = [];
-    for (let i = 1; i <= inputDoisNum; i++) {
+    for (let i = inputNumUm; i <= inputDoisNum; i++) {
         if (i % 2 === 0) {
             todosPares.push(i);
         }
     }
-    paragrafoResults.innerText = `Os números pares entre ${inputNumUm} e ${inputDoisNum} são: ${todosPares}`
-    todosPares.value.appendChild(paragrafoResults)
+    ParParagrafoResult.innerText = `Os números pares entre ${inputNumUm} e ${inputDoisNum} são: ${todosPares}`
+    todosPares.value.appendChild(ParParagrafoResult)
 });
 
 
