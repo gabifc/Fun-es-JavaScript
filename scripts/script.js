@@ -46,10 +46,10 @@ document.querySelector("#btnRaio").addEventListener("click", (e) => {
     } else if (inputRaio > 1) {
         perimetro = 3.14 * inputRaio * 2;
         //alert(`O valor do perímetro é ${perimetro.toFixed(2)}.`);
-     paragrafoResults.innerText = `O valor do perímetro é ${perimetro.toFixed(2)}.`
-    inputRaio.appendChild(paragrafoResults)
+        paragrafoResults.innerText = `O valor do perímetro é ${perimetro.toFixed(2)}.`
+        inputRaio.appendChild(paragrafoResults)
     }
-   
+
 });
 
 // Função Área 
@@ -58,10 +58,10 @@ document.querySelector("#btnArea").addEventListener("click", (e) => {
     let inputArea = document.querySelector("#inputArea").value.trim();
     let paragrafoResults = document.querySelector("#resultado4");
     let area = (3.14 * inputArea * inputArea);
-    if (inputArea === " " || isNaN(inputArea)){
+    if (inputArea === " " || isNaN(inputArea)) {
         alert("Preencha um número válido");
-    } else if (inputArea*inputArea*3.14) {
-        paragrafoResults.innerText = `O valor da área é ${area.toFixed(2)}.` 
+    } else if (inputArea * inputArea * 3.14) {
+        paragrafoResults.innerText = `O valor da área é ${area.toFixed(2)}.`
         inputArea.appendChild(paragrafoResults)
         //return alert(`O valor da área é ${area.toFixed(2)}.`)
     }
@@ -73,91 +73,82 @@ document.querySelector("#numAleatorio").addEventListener("click", (e) => {
     let paragrafoResults = document.querySelector("#resultado5");
     let resultAleatorio = Math.floor(Math.random() * 100);
     paragrafoResults.innerText = `O número aleatório gerado é: ${resultAleatorio}`
-   resultAleatorio.appendChild(paragrafoResults)
+    resultAleatorio.appendChild(paragrafoResults)
 });
 
 // Calculo desconto
 
-function calcValor(){
+function calcValor() {
     // zerando total
     document.getElementById("total").value = '0';
-    
+
     // valor líquido
     let VTOTALLIQUIDO = parseFloat(document.getElementById("valor1").value);
 
-		// desconto em porcentagem
+    // desconto em porcentagem
     let DESCONTO1 = parseFloat(document.getElementById("desconto1").value);
-    if( isNaN ( DESCONTO1 ) ){
-    	DESCONTO1 = 0;
+    if (isNaN(DESCONTO1)) {
+        DESCONTO1 = 0;
     }
-		let PDESCONTO = parseFloat( ( VTOTALLIQUIDO * DESCONTO1 ) / 100 );
+    let PDESCONTO = parseFloat((VTOTALLIQUIDO * DESCONTO1) / 100);
 
-		// desconto em valor
+    // desconto em valor
     let VDESCONTO = parseFloat(document.getElementById("desconto2").value);
-    if( isNaN ( VDESCONTO ) ){
-    	VDESCONTO = 0;
-    } 
+    if (isNaN(VDESCONTO)) {
+        VDESCONTO = 0;
+    }
 
     let TOTAL = parseFloat(VTOTALLIQUIDO) - parseFloat(PDESCONTO) - parseFloat(VDESCONTO);
 
     document.getElementById("total").value = 'R$ ' + TOTAL.toFixed(2);
-}	
+}
 
-// // Tabuadas
-// document.querySelector("#btnTabuada").addEventListener("click", () => {
-//     const inputTab = document.querySelector("#inputTabuada").value.trim();
-//     const num = [0,1,2,3,4,5,6,7,8,9,10];
-//     num.forEach((value) => {
-//         total = value*inputTab;
-//         console.log(total);
-//     })
-// })
+//Calculadora utilizando: arrow function e input com validação
+let capturarValor1 = () => {
+    valor1 = parseInt(document.querySelector(".inputUm").value.trim());
+    if (valor1 === " " || isNaN(valor1)) {
+        alert("Inválido")
+    }
+}
 
-  //Calculadora utilizando: arrow function e input com validação
- let capturarValor1 = () => {
-     valor1 = parseInt(document.querySelector(".inputUm").value.trim());
-     if (valor1 === " " || isNaN(valor1)){
-         alert("Inválido")
-     }
- }
+let capturarValor2 = () => {
+    valor2 = parseInt(document.querySelector(".inputDois").value.trim());
+    if (valor2 === " " || isNaN(valor2)) {
+        alert("Inválido")
+    }
+}
 
- let capturarValor2 = () => {
-     valor2 = parseInt(document.querySelector(".inputDois").value.trim());
-     if (valor2 === " " || isNaN(valor2)){
-         alert("Inválido")
-     }
- }
+let somar = () => {
+    total = valor1 + valor2;
+    alert('O total da soma é: ' + total);
+}
 
- let somar = () => {
-     total = valor1 + valor2;
-     alert('O total da soma é: ' + total);
- }
+let subtrair = () => {
+    total = valor1 - valor2;
+    alert('O total da subtração é: ' + total);
+}
 
- let subtrair = () => {
-     total = valor1 - valor2;
-     alert('O total da subtração é: ' + total);
- }
+let multiplicar = () => {
+    total = valor1 * valor2;
+    alert('O total da multiplicação é: ' + total);
+}
 
- let multiplicar = () => {
-     total = valor1 * valor2;
-     alert('O total da multiplicação é: ' + total);
- }
+let dividir = () => {
+    total = valor1 / valor2;
+    alert('O total da divisão é: ' + total.toFixed(2));
+}
 
- let dividir = () => {
-     total = valor1 / valor2;
-     alert('O total da divisão é: ' + total.toFixed(2));
- }
-
- let resto = () => {
-     total = valor1 % valor2;
-     alert('O resto da divisão é: ' + total);
- }
+let resto = () => {
+    total = valor1 % valor2;
+    alert('O resto da divisão é: ' + total);
+}
 
 // Manipulando Strings ////
 
 // Função Mês
 document.querySelector("#btnMes").addEventListener("click", function () {
     let mes = parseInt(document.querySelector("#inputMes").value.trim());
+    let paragrafoResults = document.querySelector("#resultadonmes")
     let nomeMes = "";
 
     switch (mes) {
@@ -200,12 +191,16 @@ document.querySelector("#btnMes").addEventListener("click", function () {
         default:
             nomeMes = "Inválido!!!";
     }
-    alert(nomeMes);
+    paragrafoResults.innerText = `${nomeMes}`
+    mes.appendChild(paragrafoResults)
+
+    //alert(nomeMes);
 })
 
 // Função quantos dias tem o mês
 document.querySelector("#btnMesDias").addEventListener("click", function () {
     let mesDias = document.querySelector("#inputMesDias").value.toLowerCase();
+    let paragrafoResults = document.querySelector("#resultadodmes")
     let nomeMesDias = "";
 
     switch (mesDias) {
@@ -226,9 +221,11 @@ document.querySelector("#btnMesDias").addEventListener("click", function () {
             } else {
                 mesDiasTrinta = "11";
             }
-            alert(`${mesDias} é o mês ${mesDiasTrinta} e possui 30 dias.`)
+            paragrafoResults.innerText = `${mesDias} é o mês ${mesDiasTrinta} e possui 30 dias.`
+            mesDias.appendChild(paragrafoResults)
+             break;
         }
-            break;
+           
         case "janeiro":
         case "março":
         case "maio":
@@ -252,17 +249,17 @@ document.querySelector("#btnMesDias").addEventListener("click", function () {
             } else {
                 mesDiasTrintaUm = "12";
             }
-            alert(`${mesDias} é o mês ${mesDiasTrintaUm} e possui 31 dias.`)
-        }
+            paragrafoResults.innerText = `${mesDias} é o mês ${mesDiasTrintaUm} e possui 31 dias.`
+            mesDias.appendChild(paragrafoResults)
             break;
-        default:
-            alert("Esse mês não existe");
-        }
+        } default:
+             alert("Esse mês não existe");
+    }
 });
 
 
 // Botão Exibir Calculadora
 function openClose() {
-   let element = document.getElementById("exibirOcultar");
+    let element = document.getElementById("exibirOcultar");
     element.classList.toggle("hidden");
 }
